@@ -92,10 +92,10 @@ while loop_condition:
         
     for p in P:
         print("Let's guess a number!")
-        person = input("To whom does this number belong? (1 - 4): ")
-        new_guess = input("What's the guess? (4 digit number): ")
-        new_points = int(input("How many points did this guess earn? (1 - 4): "))
-        new_fames = int(input("How many fames did this guess earn? (1 - 4): "))
+        person = input(f"To whom does this number belong? (1 - {len(P)}): ")
+        new_guess = input(f"What's the guess? ({len(N)} digit number): ")
+        new_points = int(input(f"How many points did this guess earn? (1 - {len(N)}): "))
+        new_fames = int(input(f"How many fames did this guess earn? (1 - {len(N)}): "))
         i = str(len(II[person]) + 1)
         II[person].append(i)
         pun[(person,i)] = new_points
